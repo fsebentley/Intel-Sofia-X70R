@@ -1,0 +1,1619 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\G-Force>cd C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>root.bat
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb remount
+remount of system failed: Permission denied
+remount failed
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb install Superuser.apk
+1733 KB/s (5904943 bytes in 3.327s)
+        pkg: /data/local/tmp/Superuser.apk
+Success
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb install RootChecker.apk
+2478 KB/s (2571825 bytes in 1.013s)
+        pkg: /data/local/tmp/RootChecker.apk
+Failure [INSTALL_FAILED_ALREADY_EXISTS]
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push install-recovery.sh /system/etc
+failed to copy 'install-recovery.sh' to '/system/etc/install-recovery.sh': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push su /system/xbin/daemonsu
+failed to copy 'su' to '/system/xbin/daemonsu': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push su /system/xbin/su
+failed to copy 'su' to '/system/xbin/su': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push su /system/xbin/sugote
+failed to copy 'su' to '/system/xbin/sugote': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push su /system/xbin/supolicy
+failed to copy 'su' to '/system/xbin/supolicy': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push supolicy /system/xbin
+failed to copy 'supolicy' to '/system/xbin/supolicy': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb push libsupol.so /system/lib
+failed to copy 'libsupol.so' to '/system/lib/libsupol.so': Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0755 /system/etc/install-recovery.sh
+Unable to chmod /system/etc/install-recovery.sh: No such file or directory
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0755 /system/xbin/su
+Unable to chmod /system/xbin/su: No such file or directory
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0755 /system/xbin/daemonsu
+Unable to chmod /system/xbin/daemonsu: No such file or directory
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0755 /system/xbin/sugote
+Unable to chmod /system/xbin/sugote: No such file or directory
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0755 /system/xbin/supolicy
+Unable to chmod /system/xbin/supolicy: Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb shell chmod 0644 /system/lib/libsupol.so
+Unable to chmod /system/lib/libsupol.so: Read-only file system
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>adb reboot
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia\ROOT-x3-C3130>cd ..
+
+C:\Users\G-Force\Downloads\Sofia\XDA for Sofia>cd ..
+
+C:\Users\G-Force\Downloads\Sofia>cd ASUS
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>dir
+ Volume in drive C has no label.
+ Volume Serial Number is F0A3-0B9D
+
+ Directory of C:\Users\G-Force\Downloads\Sofia\ASUS
+
+27-02-2016  22:29    <DIR>          .
+27-02-2016  22:29    <DIR>          ..
+27-02-2016  22:29    <DIR>          fastboot-win32
+27-02-2016  22:14           285,844 fastboot-win32.zip
+27-02-2016  22:14         8,163,328 openrecovery-twrp-2.7.0.0-flo.img
+27-02-2016  22:13         9,312,256 recovery-clockwork-touch-6.0.4.7-flo.img
+27-02-2016  22:14         4,017,098 UPDATE-SuperSU-v2.46.zip
+               4 File(s)     21,778,526 bytes
+               3 Dir(s)  131,479,232,512 bytes free
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-mako.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb sideload openrecovery-twrp-2.7.0.0-flo.img
+Total xfer: 0.01x
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-mako.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot -i 0x0B05 reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot-bootloader
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-mako.img
+(bootloader)  recovery partition type: raw
+error: cannot load 'recovery-clockwork-touch-6.0.4.7-mako.img'
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>yeayes
+'yeayes' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+FAILED (command write failed (No such device or address))
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.007s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.009s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+(bootloader)  or carry out a factory reset from recovery
+(bootloader)  To confirm the unlock, please execute the command
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+FAILED (command write failed (No such device or address))
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+FAILED (command write failed (No such device or address))
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format userdata
+FAILED (command write failed (No such device or address))
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot format cache
+FAILED (command write failed (No such device or address))
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot -i 0x1ebf flash recovery openrecovery-twrp-2.7.0.0-flo.img
+sending 'recovery' (7972 KB)...
+FAILED (command write failed (No such device or address))
+finished. total time: 0.012s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot -i 0x1ebf flash recovery openrecovery-twrp-2.7.0.0-flo.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot -i 0x1ebf flash recovery openrecovery-twrp-2.7.0.0-flo.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot -i 0x1ebf flash recovery openrecovery-twrp-2.7.0.0-flo.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery openrecovery-twrp-2.7.0.0-flo.img
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery openrecovery-twrp-2.7.0.0-flo.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (7972 KB)...
+(bootloader)  Device is locked, cannot perform flash in fastboot
+(bootloader)  Please use the below command to unlock first:
+(bootloader)  > fastboot oem unlock
+FAILED (remote failure)
+finished. total time: 0.034s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock | fastboot flash userdata | fastboot flash cache
+e<r rwoari:t innegi ftohre rd e-vpi cper o>d
+uct<  swpaeictiifnige df onro rd eAvNiDcReO I>D
+_PRODUCT_OUT set
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+(bootloader)  or carry out a factory reset from recovery
+FAILED (status read failed (Too many links))
+finished. total time: 204.535s
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot devices
+0123456789012345        fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot erase cache
+(bootloader)  cache partition type: ext4
+******** Did you mean to fastboot format this partition?
+erasing 'cache'...
+(bootloader)  Device is locked, cannot perform flash in fastboot
+(bootloader)  Please use the below command to unlock first:
+(bootloader)  > fastboot oem unlock
+FAILED (remote failure)
+finished. total time: 0.035s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.006s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_unlock_data
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.006s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash userdata
+error: neither -p product specified nor ANDROID_PRODUCT_OUT set
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash userdata -p
+fastboot: option requires an argument -- p
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash userdata -p product
+(bootloader)  userdata partition type: ext4
+error: cannot load 'C:\Intel\INDE\IDEintegration\android-sdk-windows\platform-tools../../../target/product/product/userdata.img'
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash userdata -p product
+(bootloader)  userdata partition type: ext4
+error: cannot load 'C:\Intel\INDE\IDEintegration\android-sdk-windows\platform-tools../../../target/product/product/userdata.img'
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash cache
+error: neither -p product specified nor ANDROID_PRODUCT_OUT set
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash cache ANDROID_PRODUCT_OUT
+(bootloader)  cache partition type: ext4
+error: cannot load 'ANDROID_PRODUCT_OUT'
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+(bootloader)  or carry out a factory reset from recovery
+(bootloader)  To confirm the unlock, please execute the command
+(bootloader)  > fastboot oem unlock confirm
+OKAY [  0.065s]
+finished. total time: 0.067s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery openrecovery-twrp-2.7.0.0-flo.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (7972 KB)...
+(bootloader)  Device is locked, cannot perform flash in fastboot
+(bootloader)  Please use the below command to unlock first:
+(bootloader)  > fastboot oem unlock
+FAILED (remote failure)
+finished. total time: 0.030s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+(bootloader)  or carry out a factory reset from recovery
+(bootloader)  To confirm the unlock, please execute the command
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (command write failed (Unknown error))
+finished. total time: 5.005s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+error: device not found
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot devices
+0123456789012345        fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot
+usage: fastboot [ <option> ] <command>
+
+commands:
+  update <filename>                        reflash device from update.zip
+  flashall                                 flash boot, system, vendor and if found,
+                                           recovery
+  flash <partition> [ <filename> ]         write a file to a flash partition
+  flashing lock                            locks the device. Prevents flashing                                           partitions
+  flashing unlock                          unlocks the device. Allows user to                                           flash any partition except the ones                                           that are related to bootloader
+  flashing lock_critical                   Prevents flashing bootloader related                                           partitions
+  flashing unlock_critical                 Enables flashing bootloader related                                           partitions
+  flashing get_unlock_ability              Queries bootloader to see if the                                           device is unlocked
+  erase <partition>                        erase a flash partition
+  format[:[<fs type>][:[<size>]] <partition> format a flash partition.
+                                           Can override the fs type and/or
+                                           size the bootloader reports.
+  getvar <variable>                        display a bootloader variable
+  boot <kernel> [ <ramdisk> ]              download and boot kernel
+  flash:raw boot <kernel> [ <ramdisk> ]    create bootimage and flash it
+  devices                                  list all connected devices
+  continue                                 continue with autoboot
+  reboot [bootloader]                      reboot device, optionally into bootloader
+  reboot-bootloader                        reboot device into bootloader
+  help                                     show this help message
+
+options:
+  -w                                       erase userdata and cache (and format
+                                           if supported by partition type)
+  -u                                       do not first erase partition before
+                                           formatting
+  -s <specific device>                     specify device serial number
+                                           or path to device port
+  -l                                       with "devices", lists device paths
+  -p <product>                             specify product name
+  -c <cmdline>                             override kernel commandline
+  -i <vendor id>                           specify a custom USB vendor id
+  -b <base_addr>                           specify a custom kernel base address.
+                                           default: 0x10000000
+  -n <page size>                           specify the nand page size.
+                                           default: 2048
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                           than size.  0 to disable
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>flashing unlock
+'flashing' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flashing unlock
+...
+FAILED (command write failed (Unknown error))
+finished. total time: 5.005s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flashing unlock
+...
+(bootloader)  Device is locked, cannot perform flash in fastboot
+(bootloader)  Please use the below command to unlock first:
+(bootloader)  > fastboot oem unlock
+FAILED (remote failure)
+finished. total time: 0.023s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock
+...
+(bootloader)  Unlocking the bootloader means the following:
+(bootloader)  All user data will be deleted
+(bootloader)  Any securely stored data will be inaccessible
+(bootloader)  Warranty will be void
+(bootloader)  After unlocking you have to execute
+(bootloader)  > fastboot format userdata
+(bootloader)  > fastboot format cache
+(bootloader)  or carry out a factory reset from recovery
+(bootloader)  To confirm the unlock, please execute the command
+(bootloader)  > fastboot oem unlock confirm
+OKAY [  0.072s]
+finished. total time: 0.073s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock confirm
+...
+(bootloader)  Unlocking and rebooting into unlocked state
+OKAY [  0.010s]
+finished. total time: 0.012s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flashing unlock
+...
+FAILED (status read failed (Too many links))
+finished. total time: 918.630s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot devices
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot devices
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.010s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery openrecovery-twrp-2.7.0.0-flo.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (7972 KB)...
+(bootloader)  Ready to receive: 0x007c9000 size of data
+OKAY [  0.255s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  0.672s]
+finished. total time: 0.933s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot
+< waiting for device >
+rebooting...
+
+finished. total time: 0.003s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-flo.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (9094 KB)...
+(bootloader)  Ready to receive: 0x008e1800 size of data
+OKAY [  0.287s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  0.777s]
+finished. total time: 1.071s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+error: device not found
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot
+rebooting...
+
+finished. total time: 0.002s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb
+Android Debug Bridge version 1.0.32
+Revision eac51f2bb6a8-android
+
+ -a                            - directs adb to listen on all interfaces for a connection
+ -d                            - directs command to the only connected USB device
+                                 returns an error if more than one USB device is present.
+ -e                            - directs command to the only running emulator.
+                                 returns an error if more than one emulator is running.
+ -s <specific device>          - directs command to the device or emulator with the given
+                                 serial number or qualifier. Overrides ANDROID_SERIAL
+                                 environment variable.
+ -p <product name or path>     - simple product name like 'sooner', or
+                                 a relative/absolute path to a product
+                                 out directory like 'out/target/product/sooner'.
+                                 If -p is not specified, the ANDROID_PRODUCT_OUT
+                                 environment variable is used, which must
+                                 be an absolute path.
+ -H                            - Name of adb server host (default: localhost)
+ -P                            - Port of adb server (default: 5037)
+ devices [-l]                  - list all connected devices
+                                 ('-l' will also list device qualifiers)
+ connect <host>[:<port>]       - connect to a device via TCP/IP
+                                 Port 5555 is used by default if no port number is specified.
+ disconnect [<host>[:<port>]]  - disconnect from a TCP/IP device.
+                                 Port 5555 is used by default if no port number is specified.
+                                 Using this command with no additional arguments
+                                 will disconnect from all connected TCP/IP devices.
+
+device commands:
+  adb push [-p] <local> <remote>
+                               - copy file/dir to device
+                                 ('-p' to display the transfer progress)
+  adb pull [-p] [-a] <remote> [<local>]
+                               - copy file/dir from device
+                                 ('-p' to display the transfer progress)
+                                 ('-a' means copy timestamp and mode)
+  adb sync [ <directory> ]     - copy host->device only if changed
+                                 (-l means list but don't copy)
+                                 (see 'adb help all')
+  adb shell                    - run remote shell interactively
+  adb shell <command>          - run remote shell command
+  adb emu <command>            - run emulator console command
+  adb logcat [ <filter-spec> ] - View device log
+  adb forward --list           - list all forward socket connections.
+                                 the format is a list of lines with the following format:
+                                    <serial> " " <local> " " <remote> "\n"
+  adb forward <local> <remote> - forward socket connections
+                                 forward specs are one of:
+                                   tcp:<port>
+                                   localabstract:<unix domain socket name>
+                                   localreserved:<unix domain socket name>
+                                   localfilesystem:<unix domain socket name>
+                                   dev:<character device name>
+                                   jdwp:<process pid> (remote only)
+  adb forward --no-rebind <local> <remote>
+                               - same as 'adb forward <local> <remote>' but fails
+                                 if <local> is already forwarded
+  adb forward --remove <local> - remove a specific forward socket connection
+  adb forward --remove-all     - remove all forward socket connections
+  adb reverse --list           - list all reverse socket connections from device
+  adb reverse <remote> <local> - reverse socket connections
+                                 reverse specs are one of:
+                                   tcp:<port>
+                                   localabstract:<unix domain socket name>
+                                   localreserved:<unix domain socket name>
+                                   localfilesystem:<unix domain socket name>
+  adb reverse --norebind <remote> <local>
+                               - same as 'adb reverse <remote> <local>' but fails
+                                 if <remote> is already reversed.
+  adb reverse --remove <remote>
+                               - remove a specific reversed socket connection
+  adb reverse --remove-all     - remove all reversed socket connections from device
+  adb jdwp                     - list PIDs of processes hosting a JDWP transport
+  adb install [-lrtsdg] <file>
+                               - push this package file to the device and install it
+                                 (-l: forward lock application)
+                                 (-r: replace existing application)
+                                 (-t: allow test packages)
+                                 (-s: install application on sdcard)
+                                 (-d: allow version code downgrade)
+                                 (-g: grant all runtime permissions)
+  adb install-multiple [-lrtsdpg] <file...>
+                               - push this package file to the device and install it
+                                 (-l: forward lock application)
+                                 (-r: replace existing application)
+                                 (-t: allow test packages)
+                                 (-s: install application on sdcard)
+                                 (-d: allow version code downgrade)
+                                 (-p: partial application install)
+                                 (-g: grant all runtime permissions)
+  adb uninstall [-k] <package> - remove this app package from the device
+                                 ('-k' means keep the data and cache directories)
+  adb bugreport                - return all information from the device
+                                 that should be included in a bug report.
+
+  adb backup [-f <file>] [-apk|-noapk] [-obb|-noobb] [-shared|-noshared] [-all] [-system|-nosystem] [<packages...>]
+                               - write an archive of the device's data to <file>.
+                                 If no -f option is supplied then the data is written
+                                 to "backup.ab" in the current directory.
+                                 (-apk|-noapk enable/disable backup of the .apks themselves
+                                    in the archive; the default is noapk.)
+                                 (-obb|-noobb enable/disable backup of any installed apk expansion
+                                    (aka .obb) files associated with each application; the default
+                                    is noobb.)
+                                 (-shared|-noshared enable/disable backup of the device's
+                                    shared storage / SD card contents; the default is noshared.)
+                                 (-all means to back up all installed applications)
+                                 (-system|-nosystem toggles whether -all automatically includes
+                                    system applications; the default is to include system apps)
+                                 (<packages...> is the list of applications to be backed up.  If
+                                    the -all or -shared flags are passed, then the package
+                                    list is optional.  Applications explicitly given on the
+                                    command line will be included even if -nosystem would
+                                    ordinarily cause them to be omitted.)
+
+  adb restore <file>           - restore device contents from the <file> backup archive
+
+  adb disable-verity           - disable dm-verity checking on USERDEBUG builds
+  adb enable-verity            - re-enable dm-verity checking on USERDEBUG builds
+  adb keygen <file>            - generate adb public/private key. The private key is stored in <file>,
+                                 and the public key is stored in <file>.pub. Any existing files
+                                 are overwritten.
+  adb help                     - show this help message
+  adb version                  - show version num
+
+scripting:
+  adb wait-for-device          - block until device is online
+  adb start-server             - ensure that there is a server running
+  adb kill-server              - kill the server if it is running
+  adb get-state                - prints: offline | bootloader | device
+  adb get-serialno             - prints: <serial-number>
+  adb get-devpath              - prints: <device-path>
+  adb remount                  - remounts the /system, /vendor (if present) and /oem (if present) partitions on the device read-write
+  adb reboot [bootloader|recovery]
+                               - reboots the device, optionally into the bootloader or recovery program.
+  adb reboot sideload          - reboots the device into the sideload mode in recovery program (adb root required).
+  adb reboot sideload-auto-reboot
+                               - reboots into the sideload mode, then reboots automatically after the sideload regardless of the result.
+  adb reboot-bootloader        - reboots the device into the bootloader
+  adb root                     - restarts the adbd daemon with root permissions
+  adb unroot                   - restarts the adbd daemon without root permissions
+  adb usb                      - restarts the adbd daemon listening on USB
+  adb tcpip <port>             - restarts the adbd daemon listening on TCP on the specified port
+networking:
+  adb ppp <tty> [parameters]   - Run PPP over USB.
+ Note: you should not automatically start a PPP connection.
+ <tty> refers to the tty for PPP stream. Eg. dev:/dev/omap_csmi_tty1
+ [parameters] - Eg. defaultroute debug dump local notty usepeerdns
+
+adb sync notes: adb sync [ <directory> ]
+  <localdir> can be interpreted in several ways:
+
+  - If <directory> is not specified, /system, /vendor (if present), /oem (if present) and /data partitions will be updated.
+
+  - If it is "system", "vendor", "oem" or "data", only the corresponding partition
+    is updated.
+
+environmental variables:
+  ADB_TRACE                    - Print debug information. A comma separated list of the following values
+                                 1 or all, adb, sockets, packets, rwx, usb, sync, sysdeps, transport, jdwp
+  ANDROID_SERIAL               - The serial number to connect to. -s takes priority over this if given.
+  ANDROID_LOG_TAGS             - When used with the logcat option, only these debug tags are printed.
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot sideload
+usage: fastboot [ <option> ] <command>
+
+commands:
+  update <filename>                        reflash device from update.zip
+  flashall                                 flash boot, system, vendor and if found,
+                                           recovery
+  flash <partition> [ <filename> ]         write a file to a flash partition
+  flashing lock                            locks the device. Prevents flashing                                           partitions
+  flashing unlock                          unlocks the device. Allows user to                                           flash any partition except the ones                                           that are related to bootloader
+  flashing lock_critical                   Prevents flashing bootloader related                                           partitions
+  flashing unlock_critical                 Enables flashing bootloader related                                           partitions
+  flashing get_unlock_ability              Queries bootloader to see if the                                           device is unlocked
+  erase <partition>                        erase a flash partition
+  format[:[<fs type>][:[<size>]] <partition> format a flash partition.
+                                           Can override the fs type and/or
+                                           size the bootloader reports.
+  getvar <variable>                        display a bootloader variable
+  boot <kernel> [ <ramdisk> ]              download and boot kernel
+  flash:raw boot <kernel> [ <ramdisk> ]    create bootimage and flash it
+  devices                                  list all connected devices
+  continue                                 continue with autoboot
+  reboot [bootloader]                      reboot device, optionally into bootloader
+  reboot-bootloader                        reboot device into bootloader
+  help                                     show this help message
+
+options:
+  -w                                       erase userdata and cache (and format
+                                           if supported by partition type)
+  -u                                       do not first erase partition before
+                                           formatting
+  -s <specific device>                     specify device serial number
+                                           or path to device port
+  -l                                       with "devices", lists device paths
+  -p <product>                             specify product name
+  -c <cmdline>                             override kernel commandline
+  -i <vendor id>                           specify a custom USB vendor id
+  -b <base_addr>                           specify a custom kernel base address.
+                                           default: 0x10000000
+  -n <page size>                           specify the nand page size.
+                                           default: 2048
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                           than size.  0 to disable
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot devices
+0123456789012345        fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot recovery
+usage: fastboot [ <option> ] <command>
+
+commands:
+  update <filename>                        reflash device from update.zip
+  flashall                                 flash boot, system, vendor and if found,
+                                           recovery
+  flash <partition> [ <filename> ]         write a file to a flash partition
+  flashing lock                            locks the device. Prevents flashing                                           partitions
+  flashing unlock                          unlocks the device. Allows user to                                           flash any partition except the ones                                           that are related to bootloader
+  flashing lock_critical                   Prevents flashing bootloader related                                           partitions
+  flashing unlock_critical                 Enables flashing bootloader related                                           partitions
+  flashing get_unlock_ability              Queries bootloader to see if the                                           device is unlocked
+  erase <partition>                        erase a flash partition
+  format[:[<fs type>][:[<size>]] <partition> format a flash partition.
+                                           Can override the fs type and/or
+                                           size the bootloader reports.
+  getvar <variable>                        display a bootloader variable
+  boot <kernel> [ <ramdisk> ]              download and boot kernel
+  flash:raw boot <kernel> [ <ramdisk> ]    create bootimage and flash it
+  devices                                  list all connected devices
+  continue                                 continue with autoboot
+  reboot [bootloader]                      reboot device, optionally into bootloader
+  reboot-bootloader                        reboot device into bootloader
+  help                                     show this help message
+
+options:
+  -w                                       erase userdata and cache (and format
+                                           if supported by partition type)
+  -u                                       do not first erase partition before
+                                           formatting
+  -s <specific device>                     specify device serial number
+                                           or path to device port
+  -l                                       with "devices", lists device paths
+  -p <product>                             specify product name
+  -c <cmdline>                             override kernel commandline
+  -i <vendor id>                           specify a custom USB vendor id
+  -b <base_addr>                           specify a custom kernel base address.
+                                           default: 0x10000000
+  -n <page size>                           specify the nand page size.
+                                           default: 2048
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                           than size.  0 to disable
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot-recovery
+usage: fastboot [ <option> ] <command>
+
+commands:
+  update <filename>                        reflash device from update.zip
+  flashall                                 flash boot, system, vendor and if found,
+                                           recovery
+  flash <partition> [ <filename> ]         write a file to a flash partition
+  flashing lock                            locks the device. Prevents flashing                                           partitions
+  flashing unlock                          unlocks the device. Allows user to                                           flash any partition except the ones                                           that are related to bootloader
+  flashing lock_critical                   Prevents flashing bootloader related                                           partitions
+  flashing unlock_critical                 Enables flashing bootloader related                                           partitions
+  flashing get_unlock_ability              Queries bootloader to see if the                                           device is unlocked
+  erase <partition>                        erase a flash partition
+  format[:[<fs type>][:[<size>]] <partition> format a flash partition.
+                                           Can override the fs type and/or
+                                           size the bootloader reports.
+  getvar <variable>                        display a bootloader variable
+  boot <kernel> [ <ramdisk> ]              download and boot kernel
+  flash:raw boot <kernel> [ <ramdisk> ]    create bootimage and flash it
+  devices                                  list all connected devices
+  continue                                 continue with autoboot
+  reboot [bootloader]                      reboot device, optionally into bootloader
+  reboot-bootloader                        reboot device into bootloader
+  help                                     show this help message
+
+options:
+  -w                                       erase userdata and cache (and format
+                                           if supported by partition type)
+  -u                                       do not first erase partition before
+                                           formatting
+  -s <specific device>                     specify device serial number
+                                           or path to device port
+  -l                                       with "devices", lists device paths
+  -p <product>                             specify product name
+  -c <cmdline>                             override kernel commandline
+  -i <vendor id>                           specify a custom USB vendor id
+  -b <base_addr>                           specify a custom kernel base address.
+                                           default: 0x10000000
+  -n <page size>                           specify the nand page size.
+                                           default: 2048
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                           than size.  0 to disable
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem get_identifier_token
+...
+FAILED (remote: UNKNOWN COMMAND!)
+finished. total time: 0.009s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot oem unlock confirm
+...
+FAILED (remote: Please run oem unlock first and read instructions)
+finished. total time: 0.010s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash cache
+error: neither -p product specified nor ANDROID_PRODUCT_OUT set
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash userdata
+error: neither -p product specified nor ANDROID_PRODUCT_OUT set
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flashing unlock
+...
+(bootloader)  Flashing partition:
+FAILED (remote:  Download image size is large than partition size)
+finished. total time: 0.014s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flashing userdata
+usage: fastboot [ <option> ] <command>
+
+commands:
+  update <filename>                        reflash device from update.zip
+  flashall                                 flash boot, system, vendor and if found,
+                                           recovery
+  flash <partition> [ <filename> ]         write a file to a flash partition
+  flashing lock                            locks the device. Prevents flashing                                           partitions
+  flashing unlock                          unlocks the device. Allows user to                                           flash any partition except the ones                                           that are related to bootloader
+  flashing lock_critical                   Prevents flashing bootloader related                                           partitions
+  flashing unlock_critical                 Enables flashing bootloader related                                           partitions
+  flashing get_unlock_ability              Queries bootloader to see if the                                           device is unlocked
+  erase <partition>                        erase a flash partition
+  format[:[<fs type>][:[<size>]] <partition> format a flash partition.
+                                           Can override the fs type and/or
+                                           size the bootloader reports.
+  getvar <variable>                        display a bootloader variable
+  boot <kernel> [ <ramdisk> ]              download and boot kernel
+  flash:raw boot <kernel> [ <ramdisk> ]    create bootimage and flash it
+  devices                                  list all connected devices
+  continue                                 continue with autoboot
+  reboot [bootloader]                      reboot device, optionally into bootloader
+  reboot-bootloader                        reboot device into bootloader
+  help                                     show this help message
+
+options:
+  -w                                       erase userdata and cache (and format
+                                           if supported by partition type)
+  -u                                       do not first erase partition before
+                                           formatting
+  -s <specific device>                     specify device serial number
+                                           or path to device port
+  -l                                       with "devices", lists device paths
+  -p <product>                             specify product name
+  -c <cmdline>                             override kernel commandline
+  -i <vendor id>                           specify a custom USB vendor id
+  -b <base_addr>                           specify a custom kernel base address.
+                                           default: 0x10000000
+  -n <page size>                           specify the nand page size.
+                                           default: 2048
+  -S <size>[K|M|G]                         automatically sparse files greater
+                                           than size.  0 to disable
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>update UPDATE-SuperSU-v2.65-20151226141550.zip
+'update' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot update UPDATE-SuperSU-v2.65-20151226141550.zip
+W/        ( 7628): Unable to open 'UPDATE-SuperSU-v2.65-20151226141550.zip': No such file or directory
+error: failed to open zip file 'UPDATE-SuperSU-v2.65-20151226141550.zip': I/O Error
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot update UPDATE-SuperSU-v2.65-20151226141550.zip
+W/        ( 8692): Unable to open 'UPDATE-SuperSU-v2.65-20151226141550.zip': No such file or directory
+error: failed to open zip file 'UPDATE-SuperSU-v2.65-20151226141550.zip': I/O Error
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot
+rebooting...
+
+finished. total time: 0.003s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\ASUS>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-flo.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (9094 KB)...
+(bootloader)  Ready to receive: 0x008e1800 size of data
+OKAY [  0.277s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  0.765s]
+finished. total time: 1.045s
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>fastboot update UPDATE-SuperSU-v2.65-20151226141550.zip
+W/        ( 4796): Unable to open 'UPDATE-SuperSU-v2.65-20151226141550.zip': No such file or directory
+error: failed to open zip file 'UPDATE-SuperSU-v2.65-20151226141550.zip': I/O Error
+
+C:\Users\G-Force\Downloads\Sofia\ASUS>cd ..
+
+C:\Users\G-Force\Downloads\Sofia>cd "Intel XDA with FastBoot FBRL"
+
+C:\Users\G-Force\Downloads\Sofia\Intel XDA with FastBoot FBRL>fastboot update UPDATE-SuperSU-v2.65-20151226141550.zip
+archive does not contain 'android-info.txt'
+error: update package 'UPDATE-SuperSU-v2.65-20151226141550.zip' has no android-info.txt
+
+C:\Users\G-Force\Downloads\Sofia\Intel XDA with FastBoot FBRL>cd C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>fastboot flash recovery recovery.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (13632 KB)...
+(bootloader)  Ready to receive: 0x00d50000 size of data
+OKAY [  0.412s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  1.217s]
+finished. total time: 1.634s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>fastboot reboot
+rebooting...
+
+finished. total time: 0.004s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>cd C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot flash recovery recovery.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (13964 KB)...
+(bootloader)  Ready to receive: 0x00da3000 size of data
+OKAY [  0.419s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  1.356s]
+finished. total time: 1.782s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot format userdata
+(bootloader)  userdata partition type: ext4
+(bootloader)  userdata partition type: ext4
+(bootloader)  userdata partition size: 0x30700000
+Creating filesystem with parameters:
+    Size: 812646400
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 7088
+    Inode size: 256
+    Journal blocks: 3100
+    Label:
+    Blocks: 198400
+    Block groups: 7
+    Reserved block group size: 55
+Created filesystem with 11/49616 inodes and 6446/198400 blocks
+target reported max download size of 1052770304 bytes
+erasing 'userdata'...
+(bootloader)  Erasing partition: userdata
+OKAY [  0.998s]
+sending 'userdata' (14492 KB)...
+(bootloader)  Ready to receive: 0x00e2719c size of data
+OKAY [  0.474s]
+writing 'userdata'...
+(bootloader)  Flashing partition: userdata
+OKAY [  1.879s]
+finished. total time: 3.372s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot format cache
+(bootloader)  cache partition type: ext4
+(bootloader)  cache partition type: ext4
+(bootloader)  cache partition size: 0x1a900000
+Creating filesystem with parameters:
+    Size: 445644800
+    Block size: 4096
+    Blocks per group: 32768
+    Inodes per group: 6800
+    Inode size: 256
+    Journal blocks: 1700
+    Label:
+    Blocks: 108800
+    Block groups: 4
+    Reserved block group size: 31
+Created filesystem with 11/27200 inodes and 3510/108800 blocks
+target reported max download size of 1052770304 bytes
+erasing 'cache'...
+(bootloader)  Erasing partition: cache
+OKAY [  0.203s]
+sending 'cache' (8692 KB)...
+(bootloader)  Ready to receive: 0x0087d130 size of data
+OKAY [  0.270s]
+writing 'cache'...
+(bootloader)  Flashing partition: cache
+OKAY [  0.995s]
+finished. total time: 1.481s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot reboot
+rebooting...
+
+finished. total time: 0.007s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot reboot
+rebooting...
+
+finished. total time: 0.003s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot erase userdata
+(bootloader)  userdata partition type: ext4
+******** Did you mean to fastboot format this partition?
+erasing 'userdata'...
+(bootloader)  Erasing partition: userdata
+OKAY [  0.574s]
+finished. total time: 0.576s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot erase cache
+(bootloader)  cache partition type: ext4
+******** Did you mean to fastboot format this partition?
+erasing 'cache'...
+(bootloader)  Erasing partition: cache
+OKAY [  0.241s]
+finished. total time: 0.243s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>fastboot reboot
+rebooting...
+
+finished. total time: 0.003s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-portrait>cd C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>cd ..
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>cd recovery-TWRP-C7F9-kernel-landscape
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>fastboot flash recovery recovery.img
+(bootloader)  recovery partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'recovery' (13632 KB)...
+(bootloader)  Ready to receive: 0x00d50000 size of data
+OKAY [  0.418s]
+writing 'recovery'...
+(bootloader)  Flashing partition: recovery
+OKAY [  1.131s]
+finished. total time: 1.554s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>fastboot reboot
+rebooting...
+
+finished. total time: 0.003s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\recovery-TWRP-C7F9-kernel-landscape>cd ..
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>dir
+ Volume in drive C has no label.
+ Volume Serial Number is F0A3-0B9D
+
+ Directory of C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R
+
+28-02-2016  01:00    <DIR>          .
+28-02-2016  01:00    <DIR>          ..
+28-02-2016  00:36           624,553 adb.zip
+28-02-2016  00:36         4,015,219 BETA-SuperSU-v2.52.zip
+28-02-2016  01:00    <DIR>          boot-C7F9-unsecured-boot
+28-02-2016  00:36         6,961,096 boot-C7F9-unsecured-boot.zip
+28-02-2016  00:38    <DIR>          recovery-TWRP-C7F9-kernel-landscape
+28-02-2016  00:36        10,648,230 recovery-TWRP-C7F9-kernel-landscape.zip
+28-02-2016  00:40    <DIR>          recovery-TWRP-C7F9-kernel-portrait
+28-02-2016  00:38        10,986,231 recovery-TWRP-C7F9-kernel-portrait.zip
+               5 File(s)     33,235,329 bytes
+               5 Dir(s)  131,209,912,320 bytes free
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+0123456789012345678901234567890 device
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb reboot fastboot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>dir
+ Volume in drive C has no label.
+ Volume Serial Number is F0A3-0B9D
+
+ Directory of C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R
+
+28-02-2016  01:00    <DIR>          .
+28-02-2016  01:00    <DIR>          ..
+28-02-2016  00:36           624,553 adb.zip
+28-02-2016  00:36         4,015,219 BETA-SuperSU-v2.52.zip
+28-02-2016  01:00    <DIR>          boot-C7F9-unsecured-boot
+28-02-2016  00:36         6,961,096 boot-C7F9-unsecured-boot.zip
+28-02-2016  00:38    <DIR>          recovery-TWRP-C7F9-kernel-landscape
+28-02-2016  00:36        10,648,230 recovery-TWRP-C7F9-kernel-landscape.zip
+28-02-2016  00:40    <DIR>          recovery-TWRP-C7F9-kernel-portrait
+28-02-2016  00:38        10,986,231 recovery-TWRP-C7F9-kernel-portrait.zip
+               5 File(s)     33,235,329 bytes
+               5 Dir(s)  129,824,370,688 bytes free
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>cd boot-C7F9-unsecured-boot
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>fastboot flash boot boot.img
+(bootloader)  boot partition type: raw
+target reported max download size of 1052770304 bytes
+sending 'boot' (10340 KB)...
+(bootloader)  Ready to receive: 0x00a19000 size of data
+OKAY [  0.322s]
+writing 'boot'...
+(bootloader)  Flashing partition: boot
+OKAY [  0.807s]
+finished. total time: 1.136s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>fastboot reboot
+rebooting...
+
+finished. total time: 0.002s
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R\boot-C7F9-unsecured-boot>cd ..
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb sideload BETA-SuperSU-v2.52.zip
+Total xfer: 1.43x
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>dir
+ Volume in drive C has no label.
+ Volume Serial Number is F0A3-0B9D
+
+ Directory of C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R
+
+28-02-2016  01:00    <DIR>          .
+28-02-2016  01:00    <DIR>          ..
+28-02-2016  00:36           624,553 adb.zip
+28-02-2016  00:36         4,015,219 BETA-SuperSU-v2.52.zip
+28-02-2016  01:00    <DIR>          boot-C7F9-unsecured-boot
+28-02-2016  00:36         6,961,096 boot-C7F9-unsecured-boot.zip
+28-02-2016  00:38    <DIR>          recovery-TWRP-C7F9-kernel-landscape
+28-02-2016  00:36        10,648,230 recovery-TWRP-C7F9-kernel-landscape.zip
+28-02-2016  00:40    <DIR>          recovery-TWRP-C7F9-kernel-portrait
+28-02-2016  00:38        10,986,231 recovery-TWRP-C7F9-kernel-portrait.zip
+               5 File(s)     33,235,329 bytes
+               5 Dir(s)  129,490,415,616 bytes free
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>fastboot reboot
+< waiting for device >
+^C
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>adb devices
+List of devices attached
+
+
+C:\Users\G-Force\Downloads\Sofia\Root Teclast X70R>fastboot flash recovery recovery-clockwork-touch-6.0.4.7-flo.img
